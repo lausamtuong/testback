@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cors())
 app.use(cookieParser())
 dotenv.config()
-const PORT = 30000
+const PORT = process.env.PORT||30000
 const server = app.listen(PORT,() => {
     console.log(`Listening on PORT: ${PORT}`)
 })
